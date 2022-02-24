@@ -6,7 +6,12 @@ public class Codeup_20220224 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		double meter = sc.nextDouble();
-		System.out.println(meter >= 50 && meter <= 60 ? "win" : "lose");
+		if (meter >= 30 && meter <= 40 ||meter >= 60 && meter <= 70) {
+			System.out.println("win");
+		} else {
+			System.out.println("lose");
+		}
+		
 		sc.close();
 	}
 }
