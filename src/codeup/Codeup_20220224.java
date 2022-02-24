@@ -6,7 +6,7 @@ public class Codeup_20220224 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
-		System.out.println(a % 7 == 0 ?"multiple" : "not multiple");
+		System.out.println(a % 2 == 0 ?"even" : "odd");
 		sc.close();
 	}
 }
