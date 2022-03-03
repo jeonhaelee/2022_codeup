@@ -5,12 +5,10 @@ import java.util.Scanner;
 public class Codeup_20220303 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		for(int i=1; i<=num; i++) {
-			if(i % 3 == 0) {
-				continue;
-			}
-			System.out.printf("%d ",i);
-		}
+		int a = sc.nextInt();
+		int d = sc.nextInt();
+		int n = sc.nextInt();
+		int num = a + (n-1)*d;
+		System.out.println(num);
 	}
 }
