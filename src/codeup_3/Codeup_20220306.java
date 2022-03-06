@@ -6,6 +6,6 @@ public class Codeup_20220306 {
 	}
 
 	private static void f() {
-		System.out.println("hello");
+		System.out.println(123);
 	}
 }
