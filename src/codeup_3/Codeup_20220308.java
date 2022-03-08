@@ -7,14 +7,20 @@ public class Codeup_20220308 {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		if(a%b==0) {
-			System.out.printf("%d*%d=%d",b,a/b,a);
-		}else if(b%a==0) {
-			System.out.printf("%d*%d=%d",a,b/a,b);
-		}else {
-			System.out.println("none");
+		int c = sc.nextInt();
+		int d = sc.nextInt();
+		int sum = 0; int[] arr = {a,b,c,d};
+		for(int i : arr) {
+			if(i==1) {
+				sum+=1;
+			}
 		}
-		
+		switch (sum) {
+		case 1: { System.out.println("도"); break;}
+		case 2: { System.out.println("개"); break;}
+		case 3: { System.out.println("걸"); break;}
+		case 4: { System.out.println("윷"); break;}
+		case 0: { System.out.println("모"); break;}
+		}
 	}
 }
-
