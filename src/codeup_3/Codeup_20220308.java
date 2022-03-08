@@ -7,20 +7,20 @@ public class Codeup_20220308 {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int c = sc.nextInt();
-		int d = sc.nextInt();
-		int sum = 0; int[] arr = {a,b,c,d};
+		int[] arr = {a,b}; int sum = 0;
 		for(int i : arr) {
-			if(i==1) {
-				sum+=1;
+			switch (i) {
+			case 1: {sum+=400; break;}
+			case 2: {sum+=340; break;}
+			case 3: {sum+=170; break;}
+			case 4: {sum+=100; break;}
+			case 5: {sum+=70; break;}
 			}
 		}
-		switch (sum) {
-		case 1: { System.out.println("도"); break;}
-		case 2: { System.out.println("개"); break;}
-		case 3: { System.out.println("걸"); break;}
-		case 4: { System.out.println("윷"); break;}
-		case 0: { System.out.println("모"); break;}
+		if(sum>500) {
+			System.out.println("angry");
+		}else {
+			System.out.println("no angry");
 		}
 	}
 }
