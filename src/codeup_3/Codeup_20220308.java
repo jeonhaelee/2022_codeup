@@ -1,15 +1,20 @@
 package codeup_3;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Codeup_20220308 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		double a = sc.nextDouble();
-		double b = sc.nextDouble();
-		double[] numbers = {a+b,a-b,b-a,a*b,a/b,b/a,Math.pow(a, b),Math.pow(b, a)};
-		Arrays.sort(numbers);
-		System.out.printf("%.6f",numbers[numbers.length-1]);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		if(a%b==0) {
+			System.out.printf("%d*%d=%d",b,a/b,a);
+		}else if(b%a==0) {
+			System.out.printf("%d*%d=%d",a,b/a,b);
+		}else {
+			System.out.println("none");
+		}
+		
 	}
 }
+
