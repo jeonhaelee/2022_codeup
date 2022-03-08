@@ -1,5 +1,6 @@
 package codeup_3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Codeup_20220308 {
@@ -7,20 +8,13 @@ public class Codeup_20220308 {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int[] arr = {a,b}; int sum = 0;
-		for(int i : arr) {
-			switch (i) {
-			case 1: {sum+=400; break;}
-			case 2: {sum+=340; break;}
-			case 3: {sum+=170; break;}
-			case 4: {sum+=100; break;}
-			case 5: {sum+=70; break;}
-			}
-		}
-		if(sum>500) {
-			System.out.println("angry");
+		int c = sc.nextInt();
+		int[] arr = {a,b,c};
+		Arrays.sort(arr);
+		if(arr[2]<arr[0]+arr[1]) {
+			System.out.println("yes");
 		}else {
-			System.out.println("no angry");
+			System.out.println("no");
 		}
 	}
 }
