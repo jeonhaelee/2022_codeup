@@ -5,19 +5,18 @@ import java.util.Scanner;
 public class Codeup_20220311 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		int count = 0;
-		
-		for(int i=0; i<num; i++) {
-			int number = sc.nextInt();
-			if(number%2==0) {
-				count += 1;
-			}
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		int n = sc.nextInt();
+		int number = a;
+		for(int i=2; i<=n; i++) {
+			number = number * b + c;
 		}
-		
-		System.out.println(count);
+		System.out.println(number);
 	}
 }
+
 
 
 
