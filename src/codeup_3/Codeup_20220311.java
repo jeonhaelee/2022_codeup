@@ -10,7 +10,9 @@ public class Codeup_20220311 {
 		
 		for(int i=0; i<num; i++) {
 			int number = sc.nextInt();
-			sum += number;
+			if(number%5==0) {
+				sum += number;
+			}
 		}
 		
 		System.out.println(sum);
