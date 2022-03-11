@@ -5,13 +5,17 @@ import java.util.Scanner;
 public class Codeup_20220311 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String word = sc.nextLine();
+		int num = sc.nextInt();
+		int sum = 0;
 		
-		char first = word.charAt(0);
-		char second = word.charAt(2);
-		
-		for(int i=first; i<=second; i++) {
-			System.out.printf("%c ",(char)i);
+		for(int i=0; i<num; i++) {
+			int number = sc.nextInt();
+			sum += number;
 		}
+		
+		System.out.println(sum);
 	}
 }
+
+
+
