@@ -17,7 +17,9 @@ public class Codeup_20220312 {
 			}
 			else {
 				sum += i;
-				answer += "+";
+				if(i!=a) {
+					answer += "+";
+				}
 				answer += i;
 			}
 		}
