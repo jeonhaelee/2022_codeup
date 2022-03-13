@@ -6,12 +6,12 @@ public class Codeup_20220312 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
-		int[] nums = new int[num];
-		for(int i=0; i<num;i++) {
-			nums[i] = sc.nextInt();
+		for(int k=1; k<num; k++) {
+			if((int)Math.sqrt(num-k) == Math.sqrt(num-k)) {
+				System.out.printf("%d ",k);
+				System.out.println((int)Math.sqrt(num-k));
+				break;
+			}
 		}
-		System.out.println(nums[0]);
-		System.out.println(nums[(num+1)/2-1]);
-		System.out.println(nums[num-1]);
 	}
 }
