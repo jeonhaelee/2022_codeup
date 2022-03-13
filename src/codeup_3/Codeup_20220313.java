@@ -1,39 +1,66 @@
 package codeup_3;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Codeup_20220313 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		
-		for(int i=1; i<=num; i++) {
-			if(prime_count(num)==0) {
-			System.out.println("wrong number");
-			break;
-			}
-			if(num%i==0) {
-				if(prime_count(i)==0) {
-					if(prime_count(num/i)==0) {
-						System.out.println(i + " " + num/i);
-						break;
-					}
-				}else {
-					System.out.println("wrong number");
-					break;
-				}
-			}
-		}
-		
-	}
+		String[] sentence = sc.nextLine().split("");
 
-public static int prime_count(int number) {
-	int count = 0;
-	for(int j=2; j<number; j++) {
-		if(number%j==0) {
-			count+=1;
+		List<Integer> number = new ArrayList<>();
+
+		String word = "";
+		for (int i = 0; i < sentence.length; i++) {
+
+			if (sentence[i].equals("+")) {
+				number.add(Integer.parseInt(word));
+				word = "";
+				continue;
+			} else if (sentence[i].equals("-")) {
+				number.add(Integer.parseInt(word));
+				word = "";
+				continue;
+			} else if (sentence[i].equals("*")) {
+				number.add(Integer.parseInt(word));
+				word = "";
+				continue;
+			} else if (sentence[i].equals("/")) {
+				number.add(Integer.parseInt(word));
+				word = "";
+				continue;
+			} else if (sentence[i].equals("=")) {
+				number.add(Integer.parseInt(word));
+				break;
+			} else {
+				word += sentence[i];
+			}
 		}
+
+		int answer = number.get(0);
+		int count = 1;
+		for (int i = 0; i < sentence.length-1; i++) {
+			if (sentence[i].equals("+")) {
+				answer += number.get(count);
+				count += 1;
+				continue;
+			} else if (sentence[i].equals("-")) {
+				answer -= number.get(count);
+				count += 1;
+				continue;
+			} else if (sentence[i].equals("*")) {
+				answer *= number.get(count);
+				count += 1;
+				continue;
+			} else if (sentence[i].equals("/")) {
+				answer /= number.get(count);
+				count += 1;
+				continue;
+			} 
+
+		}
+		
+		System.out.println(answer);
 	}
-	return count;
-}
 }
