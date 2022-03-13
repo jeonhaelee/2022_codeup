@@ -5,24 +5,13 @@ import java.util.Scanner;
 public class Codeup_20220312 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		String answer = "";
-		int sum = 0;
-		for(int i=a; i<=b; i++) {
-			if(i%2==0) {
-				sum -= i;
-				answer += "-";
-				answer += i;
-			}
-			else {
-				sum += i;
-				if(i!=a) {
-					answer += "+";
-				}
-				answer += i;
-			}
+		int num = sc.nextInt();
+		int[] nums = new int[num];
+		for(int i=0; i<num;i++) {
+			nums[i] = sc.nextInt();
 		}
-		System.out.println(answer+"="+sum);
+		System.out.println(nums[0]);
+		System.out.println(nums[(num+1)/2-1]);
+		System.out.println(nums[num-1]);
 	}
 }
