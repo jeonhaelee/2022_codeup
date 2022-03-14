@@ -4,20 +4,15 @@ import java.util.Scanner;
 
 public class Codeup_20220314 {
 	public static void main(String[] args) {
-		String answer = "";
-
 		Scanner sc = new Scanner(System.in);
-		String sentence = sc.nextLine();
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 		
-		for( int i=0; i<sentence.length(); i++) {
-			if(65<=(int)sentence.charAt(i) && (int)sentence.charAt(i)<=90) {
-				answer +=  (char)((int)sentence.charAt(i)+32);
-			}else if(97<=(int)sentence.charAt(i) && (int)sentence.charAt(i)<=122) {
-				answer +=  (char)((int)sentence.charAt(i)-32);
-			}else {
-				answer += sentence.charAt(i);
+		for(int i=1; i<=a; i++) {
+			for(int j=1; j<=b; j++) {
+				System.out.printf("%d %d\n",i,j);
 			}
 		}
-		System.out.println(answer);
+		
 	}
 }
