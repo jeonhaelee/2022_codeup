@@ -10,14 +10,12 @@ public class Codeup_20220314 {
 		String sentence = sc.nextLine();
 		
 		for( int i=0; i<sentence.length(); i++) {
-			if(sentence.charAt(i)==' ') {
-				answer += ' ';
+			if(65<=(int)sentence.charAt(i) && (int)sentence.charAt(i)<=90) {
+				answer +=  (char)((int)sentence.charAt(i)+32);
+			}else if(97<=(int)sentence.charAt(i) && (int)sentence.charAt(i)<=122) {
+				answer +=  (char)((int)sentence.charAt(i)-32);
 			}else {
-				if((int)sentence.charAt(i) >= 120) {
-					answer += (char)((int)sentence.charAt(i)+3 - 26);
-				}else {
-					answer += (char)((int)sentence.charAt(i)+3);
-				}
+				answer += sentence.charAt(i);
 			}
 		}
 		System.out.println(answer);
