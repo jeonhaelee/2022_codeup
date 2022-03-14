@@ -13,10 +13,10 @@ public class Codeup_20220314 {
 			if(sentence.charAt(i)==' ') {
 				answer += ' ';
 			}else {
-				if((int)sentence.charAt(i) <= 99) {
-					answer += (char)((int)sentence.charAt(i)-3 + 26);
+				if((int)sentence.charAt(i) >= 120) {
+					answer += (char)((int)sentence.charAt(i)+3 - 26);
 				}else {
-					answer += (char)((int)sentence.charAt(i)-3);
+					answer += (char)((int)sentence.charAt(i)+3);
 				}
 			}
 		}
