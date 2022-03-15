@@ -12,7 +12,11 @@ public class Codeup_20220315 {
 			star += "*";
 		}
 		
-		for(int i=n; i>0; i--) {
+		String space = "";
+		System.out.println(star);
+		for(int i=n-1; i>0; i--) {
+			space += " ";
+			System.out.printf("%s",space);
 			System.out.println(star.substring(0,i));
 		}
 	}
