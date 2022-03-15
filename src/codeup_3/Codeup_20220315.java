@@ -10,9 +10,11 @@ public class Codeup_20220315 {
 		String star = "";
 		for(int i=0; i<n;i++) {
 			star += "*";
-			System.out.println(star);
 		}
-
+		
+		for(int i=n; i>0; i--) {
+			System.out.println(star.substring(0,i));
+		}
 	}
 }
 
