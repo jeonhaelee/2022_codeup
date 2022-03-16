@@ -7,17 +7,13 @@ public class Codeup_20220316 {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
 		
+		String star = "**";
+		String space = "";
 		
-		String star = "";
-		for(int i=1; i<=num; i++) {
-			star += "*";
-			if(i%2!=0) {
-				String space = "";
-				for(int j=1; j<=(num-i)/2; j++) {
-					space += " ";
-				}
-				System.out.println(space+star);
-			}
+		System.out.println(star);
+		for(int i=1; i<num; i++) {
+			space += " ";
+			System.out.println(space+star);
 		}
 	}
 }
